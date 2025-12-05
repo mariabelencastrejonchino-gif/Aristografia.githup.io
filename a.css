@@ -1,0 +1,169 @@
+
+#creditoFicha {
+font-family: 30px/20px calibri;
+text-transform: uppercase;
+text-align: center;
+font-size: 35px;
+letter-spacing: 6px;
+color: #20f3e8;
+}
+.buttonsFicha {
+font: 18px/20px calibri;
+width: 120px;
+text-align: center;
+border-bottom: solid 2px #7debc6;
+text-transform: uppercase;
+color: #8ee0e0;
+padding-top: 24px;
+cursor: pointer;
+margin-left: 18px;
+}
+.buttonsFicha:hover {
+color: #60bae4;
+border-bottom: solid 2px #54a5f0;
+}
+.textoFicha {
+  width: 970px;
+  height: 690px;
+  background: url("fo.jpg") no-repeat center center;
+  background-size: cover; /* Hace que la imagen llene todo el recuadro sin deformarse */
+  margin-left: 10px;
+  opacity: 1;
+  font: 11px/11px "Palatino Linotype", serif;
+  display: none;
+  color: rgba(243, 245, 244, 0.89);
+}
+
+#tituloFicha {
+color: rgb(0, 247, 255);
+border-bottom: solid 1px #61e9c0;
+border-top: solid 1px #56ebca;
+padding: 18px;
+width: 300px;
+margin: 0 auto;
+margin-bottom: 19px;
+font: 25px/16px palatino linotype;
+text-transform: uppercase;
+text-align: center;
+letter-spacing: 2px;
+}
+#IMGficha {
+width: 150px;
+height: 250px;
+margin-right: 10px;
+margin-left: 5px;
+}
+/**
+Porque no pesca por si sola <_<
+*/
+img  {
+    float: left;
+} 
+#textoFontFicha {
+font: 22px/15px palatino linotype;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #1ebdfc;
+}
+
+.buttonOcultar {
+  font-family: "Palatino Linotype", serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+   background: linear-gradient(135deg, #194cbb, #1198b6);
+  color: #50e098;
+  text-align: center;
+  margin: 0 auto;
+  width: 120px;
+  margin-top: 18px;
+  border-radius: 8px;
+
+  /* Difuminado */
+  box-shadow: 0 0 15px #2ef190; 
+  transition: 0.3s;
+}
+
+.buttonOcultar:hover {
+  /* Más brillo cuando pasas el mouse */
+  box-shadow: 0 0 25px #2ef5eb;
+  background: #0c0e0b;
+}
+
+
+/*  Fondo de video */
+#videoFondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;        /* ocupa todo el ancho de la ventana */
+  height: 100vh;       /* ocupa todo el alto de la ventana */
+  object-fit: cover;   /* el video se recorta para llenar la pantalla */
+  z-index: -1;         /* se manda detrás de todo el contenido */
+  opacity: 0.9;        /* puedes ajustar la opacidad (0.5 = más transparente) */
+}
+
+/* Asegura que todo el contenido esté encima del video */
+body, #fondoFicha, table, .textoFicha, .buttonsFicha, #creditoFicha {
+  position: relative;
+  z-index: 1;
+}
+/* 🌌 Capa semi-transparente sobre el video */
+#videoOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.404); /* negro al 50% de opacidad */
+  z-index: 0; /* queda encima del video, pero debajo del contenido */
+}
+/* 🎬 Fondo de video solo dentro de .textoFicha */
+.textoFicha {
+  position: relative;
+  overflow: hidden; /* oculta lo que sobresalga del contenedor */
+  width: 750px;
+  height: 690px;
+  margin-left: 10px;
+  font: 25px/25px "Palatino Linotype", serif;
+  display: none;
+}
+
+/* Centrar todo el contenido principal */
+body {
+  margin: 0;
+  height: 90vh;                /* ocupa toda la altura de la pantalla */
+  display: flex;                /* activa el sistema flexbox */
+  justify-content: center;      /* centra horizontalmente */
+  align-items: center;          /* centra verticalmente */
+  overflow: hidden;             /* evita scroll innecesario */
+}
+
+/* Asegura que el video siga en el fondo */
+#videoFondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2; /* detrás de todo */
+}
+
+td:first-child {
+  width: 200px; /* Ajusta según el tamaño que desees */
+  height: 400px; /* Puedes cambiarlo si quieres hacerlo más alto o más bajo */
+  background: rgba(73, 109, 126, 0.2); /* Fondo semitransparente */
+  border-radius: 12px;
+  padding: 20px;
+
+  /* 🔹 Centrar contenido dentro del recuadro */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+  gap: 15px; /* separa los botones */
+}
+
